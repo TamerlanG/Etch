@@ -1,6 +1,20 @@
 let container = document.getElementById("container");
+let clear_button = document.getElementById("clear")
 let black = document.getElementById("btnBlack");
-let red = document.getElementById("btnRgb");
+let coler_picker = document.getElementById("btnRgb");
+
+coler_picker.addEventListener("input", watchColorPicker, false)
+clear_button.addEventListener("click", clear, false)
+
+function get_css(color="black"){
+    return `.button_color:hover  { background-color:${color}}`
+
+}
+
+function watchColorPicker(event) {
+    console.log(event.target.value)
+    addColor(event.target.value)
+  }
 
 // the game columns
 function game (number){
@@ -18,12 +32,16 @@ game(16)
 let divs = document.querySelectorAll("div");
 function addColor (colorClass){
     divs.forEach(function (div) {
-    div.addEventListener('mouseover', () => {
-        div.classList.add(colorClass);
-    })
-})
+        div.addEventListener('mouseover', () => {
+            div.setAttribute("style", `background-color: ${colorClass};`)
+        })
+}) 
 }
-addColor("black")
 // the Clear button 
-    
-   
+function clear(){
+    divs.forEach(function (div) {
+        div.classList = ['box']         
+    }) 
+}
+
+addColor()
