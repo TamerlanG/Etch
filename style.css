@@ -1,0 +1,49 @@
+
+
+body {
+    
+}
+
+#container {
+    background-color: powderblue;
+    border: 1px solid black ;
+    display: grid;
+    grid-template-columns: repeat(16, 0fr);
+    width : 960px;
+    
+}
+
+.box {
+    width : 50px ;
+    height: 50px ; 
+    border: 1px solid black ;
+    background-color : white ;
+    }
+
+.black {
+    background-color :  gray ;
+}
+.red {
+    background-color :  red ;
+}
+
+button {
+ color: #090909;
+ padding: 0.7em 1.7em;
+ font-size: 18px;
+ border-radius: 0.5em;
+ background: #e8e8e8;
+ border: 1px solid #e8e8e8;
+ 
+ box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+}
+
+#btnBlack{
+   background-color: black;
+    color: white;
+}
+
+#btnRgb{
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
